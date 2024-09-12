@@ -1,0 +1,217 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 30px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+    background-color: #587a68;
+    color: white;
+}
+
+.header-band {
+    height: 2px;
+    background-color: #d3d3d3;
+}
+
+section {
+    text-align: center;
+    padding: 20px 20px;
+}
+
+#about,
+#playlist {
+    background-color: #587a68;
+    color: white;
+    text-align: start;
+}
+
+#about p,
+h2 {
+    margin: 50px;
+}
+
+#dont-miss,
+#countdown {
+    background-color: white;
+    color: black;
+}
+
+#dont-miss div {
+    padding: 70px;
+}
+
+#countdown img {
+    width: 100%;
+    max-width: 500px;
+}
+
+#countdown h2 {
+    margin: 0;
+}
+
+#dont-miss,
+#playlist {
+    display: flex;
+    flex-direction: row; /* Ajustado para row para manter o layout original no desktop */
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+#dont-miss .text-section,
+#playlist .text-section {
+    text-align: left;
+    width: 50%;
+}
+
+#dont-miss .icon-section,
+#playlist .icon-section {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.button {
+    display: inline-block;
+    background-color: #587a68;
+    color: white;
+    padding: 12px 16px;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 20px;
+    border: 2px solid white;
+    width: auto;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: white;
+    color: #587a68;
+    border: 2px solid #587a68;
+}
+
+footer {
+    text-align: center;
+    background-color: #d3d3d3;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        display: none; /* Esconde o menu no mobile */
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px auto;
+    }
+
+    #countdown h2 {
+        font-size: 18px; /* Aumenta a fonte do título do cronômetro */
+    }
+
+    #countdown {
+        font-size: 12px; /* Diminui a fonte do cronômetro */
+    }
+
+    #dont-miss,
+    #playlist {
+        flex-direction: column; /* Muda o layout para coluna em telas menores */
+        width: 100%; /* Usa toda a largura */
+        padding: 0; /* Remove padding que pode estar espremendo o conteúdo */
+        margin: 0; /* Remove margens externas */
+    }
+
+    #dont-miss h2 {
+        text-align: center;
+    }
+
+    #dont-miss p {
+        text-align: justify;
+    }
+
+    #playlist h2 {
+        text-align: center;
+    }
+
+    #playlist p {
+        text-align: justify;
+    }
+
+    #dont-miss .text-section,
+    #playlist .text-section,
+    #dont-miss .icon-section,
+    #playlist .icon-section {
+        padding: 10px;
+        margin: 0 auto; /* Centraliza e remove margens que espremem o conteúdo */
+        flex-basis: auto; /* Permite que o conteúdo determine o tamanho */
+        width: 70%; /* Ajusta a largura para não tocar as bordas */
+    }
+
+    #about p,
+    h2 {
+        margin: 20px;
+        text-align: justify;
+        padding: 0 10px; /* Adiciona padding para não tocar as bordas */
+    }
+
+    .button {
+        padding: 8px 12px; /* Botões menores em dispositivos móveis */
+        font-size: 14px; /* Tamanho da fonte do botão */
+        margin: 10px auto; /* Centraliza o botão */
+        display: block; /* Torna o botão um bloco para centralizar */
+    }
+
+    footer {
+        font-size: 14px; /* Ajusta o tamanho da fonte do rodapé */
+    }
+}

@@ -1,0 +1,111 @@
+@import url("../style/index.css");
+
+html,
+body {
+    height: 100%; /* Assegura que o html e o body ocupem a altura total */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    min-height: 100vh; /* Garante que o corpo tenha pelo menos a altura da viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Faz com que o main ocupe o espaço disponível */
+}
+
+footer {
+    text-align: center;
+    background-color: #d3d3d3;
+    height: 50px;
+    line-height: 50px;
+    margin-top: auto; /* Empurra automaticamente o rodapé para baixo */
+    display: flex; /* Habilita o flexbox para alinhar itens */
+    align-items: center; /* Alinha itens verticalmente no centro */
+    justify-content: center; /* Alinha itens horizontalmente no centro */
+    font-size: 16px; /* Ajusta o tamanho da fonte se necessário */
+}
+
+#schedule {
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    max-width: 95%; /* Ajuste para melhor aproveitamento do espaço */
+    background-color: #f8f8f8; /* Fundo leve para a seção para destacá-la */
+    border-radius: 8px; /* Bordas arredondadas para suavizar a apresentação */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidade */
+    display: flex;
+    flex-direction: column; /* Garante que o título fique acima dos cards */
+    align-items: center; /* Centraliza os itens */
+}
+
+#schedule img {
+    width: 300px;
+}
+
+h2 {
+    margin-bottom: 20px; /* Espaço entre o título e os cards */
+}
+
+.event-card {
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px 5px;
+    width: calc(
+        50% - 40px
+    ); /* Ajusta a largura para 2 cards por linha, subtraindo as margens */
+    text-align: left;
+    position: relative; /* Posicionamento relativo para a tarja */
+    transition: transform 0.3s;
+}
+
+.event-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #587a68; /* Cor da tarja */
+    border-radius: 8px 0 0 8px; /* Arredonda apenas os cantos esquerdos */
+}
+
+.event-card h3 {
+    color: #587a68;
+    font-size: 18px; /* Tamanho maior para o título do evento */
+}
+
+.event-card p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.event-card:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+    #schedule {
+        padding: 10px;
+    }
+
+    #schedule h2 {
+        text-align: center;
+    }
+
+    .event-card {
+        width: 80%; /* Faz com que cada card ocupe a largura total em dispositivos móveis */
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
